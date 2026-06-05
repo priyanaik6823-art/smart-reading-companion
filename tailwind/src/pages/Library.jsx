@@ -29,7 +29,7 @@ const Library = () => {
   const fetchLibraryBooks = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/library/${user._id}`
+        `https://smart-reading-companion-1.onrender.com/api/library/${user._id}`
       );
 
       setLibraryBooks(res.data.libraryBooks);
@@ -188,7 +188,7 @@ const Library = () => {
                 >
 
                   <img
-                    src={`http://localhost:5000${item.bookId?.coverImage}`}
+                    src={`https://smart-reading-companion-1.onrender.com${item.bookId?.coverImage}`}
                     alt="Book"
                     className="w-24 h-32 rounded-2xl object-cover"
                   />
