@@ -70,7 +70,7 @@ const Profile = () => {
   const handleFollow = async () => {
     try {
       await axios.post(
-        `http://localhost:5000/api/follow/follow/${profileUser?._id}`,
+        `https://smart-reading-companion-1.onrender.com/api/follow/follow/${profileUser?._id}`,
         {},
         {
           headers: {
@@ -89,7 +89,7 @@ const Profile = () => {
   const handleUnfollow = async () => {
     try {
       await axios.post(
-        `http://localhost:5000/api/follow/unfollow/${profileUser?._id}`,
+        `https://smart-reading-companion-1.onrender.com/api/follow/unfollow/${profileUser?._id}`,
         {},
         {
           headers: {
@@ -110,7 +110,7 @@ const Profile = () => {
       const token = localStorage.getItem("token");
 
       const res = await axios.put(
-        "http://localhost:5000/api/user/edit",
+        "https://smart-reading-companion-1.onrender.com/api/user/edit",
         {
           name: editName,
           bio: editBio,
@@ -142,7 +142,7 @@ const Profile = () => {
       const token = localStorage.getItem("token");
 
       const res = await axios.put(
-        "http://localhost:5000/api/user/upload-profile-pic",
+        "https://smart-reading-companion-1.onrender.com/api/user/upload-profile-pic",
         formData,
         {
           headers: {
@@ -224,7 +224,7 @@ const Profile = () => {
           ? id
           : currentUserId;
 
-      const url = `http://localhost:5000/api/user/${profileId}`;
+      const url = `https://smart-reading-companion-1.onrender.com/api/user/${profileId}`;
 
       const res = await axios.get(url, {
         headers: {
@@ -354,7 +354,7 @@ const Profile = () => {
             <img
               src={
                 profileUser?.profilePic
-                  ? `http://localhost:5000/${profileUser.profilePic}`
+                  ? `https://smart-reading-companion-1.onrender.com/${profileUser.profilePic}`
                   : "https://i.pravatar.cc/300"
               }
               alt="profile"
@@ -619,7 +619,7 @@ const Profile = () => {
                   }`}
                 >
                   <img
-                    src={`http://localhost:5000${book.coverImage}`}
+                    src={`https://smart-reading-companion-1.onrender.com${book.coverImage}`}
                     alt={book.title}
                     className="w-full h-60 object-cover"
                   />
@@ -738,7 +738,7 @@ const Profile = () => {
                 >
                   {user?.profilePic ? (
                     <img
-                      src={`http://localhost:5000/${user.profilePic}`}
+                      src={`https://smart-reading-companion-1.onrender.com/${user.profilePic}`}
                       alt={user.name}
                       className="w-12 h-12 rounded-full object-cover"
                     />
@@ -794,7 +794,7 @@ const Profile = () => {
                 >
                   {user?.profilePic ? (
                     <img
-                      src={`http://localhost:5000/${user.profilePic}`}
+                      src={`https://smart-reading-companion-1.onrender.com/${user.profilePic}`}
                       alt={user.name}
                       className="w-12 h-12 rounded-full object-cover"
                     />
