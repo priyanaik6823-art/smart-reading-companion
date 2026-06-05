@@ -253,7 +253,7 @@ const BookDetails = () => {
                 onClick={() =>
                   navigate("/read", {
                     state: {
-                      pdfUrl: `http://localhost:5000${book.pdfFile}`,
+                      pdfUrl: `https://smart-reading-companion-1.onrender.com${book.pdfFile}`,
                       bookId: book._id,
                       totalPages: book.totalPages,
                     },
@@ -289,7 +289,7 @@ const BookDetails = () => {
   <img
     src={
       book.uploadedBy?.profilePic
-        ? `http://localhost:5000/${book.uploadedBy.profilePic}`
+        ? `https://smart-reading-companion-1.onrender.com/${book.uploadedBy.profilePic}`
         : "https://i.pravatar.cc/150"
     }
     className="w-12 h-12 rounded-full object-cover border-2 border-white"
