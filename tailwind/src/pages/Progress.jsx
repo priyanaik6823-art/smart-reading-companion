@@ -45,7 +45,7 @@ const Progress = () => {
     try {
 
       const res = await axios.get(
-        `http://localhost:5000/api/progress/user/${userId}`
+        `https://smart-reading-companion-1.onrender.com/api/progress/user/${userId}`
       );
 
       setProgressData(res.data);
@@ -159,7 +159,7 @@ const Progress = () => {
                     {book?.coverImage && (
 
                       <img
-                        src={`http://localhost:5000${book.coverImage}`}
+                        src={`https://smart-reading-companion-1.onrender.com${book.coverImage}`}
                         alt={book?.title}
                         className="w-28 h-40 object-cover rounded-2xl shadow-lg"
                       />
@@ -247,7 +247,7 @@ const Progress = () => {
                         onClick={() =>
                           navigate("/read", {
                             state: {
-                              pdfUrl: `http://localhost:5000${book.pdfFile}`,
+                              pdfUrl: `https://smart-reading-companion-1.onrender.com${book.pdfFile}`,
                               bookId: book._id,
                               totalPages: item.totalPages,
                             },
