@@ -131,7 +131,7 @@ export default function AuthPage() {
       setLoading(true);
 
       const res = await fetch(
-        "http://localhost:5000/api/auth/login",
+        "https://smart-reading-companion-1.onrender.com/api/auth/login",
         {
           method: "POST",
 
