@@ -56,7 +56,7 @@ const Assistant = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/assistant/chat",
+        "https://smart-reading-companion-1.onrender.com/api/assistant/chat",
         {
           message: currentMessage,
         }
