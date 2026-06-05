@@ -46,7 +46,7 @@ export default function AuthPage() {
       setLoading(true);
 
       const res = await fetch(
-        "http://localhost:5000/api/auth/register",
+        "https://smart-reading-companion-1.onrender.com/api/auth/register",
         {
           method: "POST",
 
@@ -88,7 +88,7 @@ export default function AuthPage() {
       setLoading(true);
 
       const res = await fetch(
-        "http://localhost:5000/api/auth/verify-otp",
+        "https://smart-reading-companion-1.onrender.com/api/auth/verify-otp",
         {
           method: "POST",
 
@@ -190,7 +190,7 @@ export default function AuthPage() {
       setLoading(true);
 
       const res = await fetch(
-        "http://localhost:5000/api/auth/forgot-password",
+        "https://smart-reading-companion-1.onrender.com/api/auth/forgot-password",
         {
           method: "POST",
 
@@ -230,7 +230,7 @@ export default function AuthPage() {
       setLoading(true);
 
       const res = await fetch(
-        "http://localhost:5000/api/auth/reset-password",
+        "https://smart-reading-companion-1.onrender.com/api/auth/reset-password",
         {
           method: "POST",
 
