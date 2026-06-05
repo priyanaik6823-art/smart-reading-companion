@@ -31,7 +31,7 @@ const BookDetails = () => {
   const fetchBook = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/books/${id}`
+        `https://smart-reading-companion-1.onrender.com/api/books/${id}`
       );
 
       setBook(res.data.book);
@@ -46,7 +46,7 @@ const BookDetails = () => {
     try {
 
       const res = await axios.get(
-        `http://localhost:5000/api/progress/user/${user._id}/book/${id}`
+        `https://smart-reading-companion-1.onrender.com/progress/user/${user._id}/book/${id}`
       );
 
       setProgress(res.data);
@@ -61,7 +61,7 @@ const BookDetails = () => {
     try {
 
       const res = await axios.get(
-        `http://localhost:5000/api/reviews/${id}`
+        `https://smart-reading-companion-1.onrender.com/api/reviews/${id}`
       );
 
       setReviews(res.data.reviews);
@@ -76,7 +76,7 @@ const BookDetails = () => {
     try {
 
       const res = await axios.post(
-        "http://localhost:5000/api/library/add",
+        "https://smart-reading-companion-1.onrender.com/api/library/add",
         {
           userId: user._id,
           bookId: book._id,
@@ -97,7 +97,7 @@ const BookDetails = () => {
     try {
 
       const res = await axios.post(
-        "http://localhost:5000/api/reviews/add",
+        "https://smart-reading-companion-1.onrender.com/api/reviews/add",
         {
           userId: user._id,
           bookId: id,
@@ -159,7 +159,7 @@ const BookDetails = () => {
           {/* COVER */}
           <div>
             <img
-              src={`http://localhost:5000${book.coverImage}`}
+              src={`https://smart-reading-companion-1.onrender.com${book.coverImage}`}
               className="w-full max-h-[700px] object-contain rounded-2xl bg-white"
             />
           </div>
