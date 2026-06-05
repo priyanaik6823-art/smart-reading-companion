@@ -77,7 +77,7 @@ const UploadBook = () => {
       data.append("coverImage", coverImage);
 
       const res = await axios.post(
-        "http://localhost:5000/api/books",
+        "https://smart-reading-companion-1.onrender.com/api/books",
         data,
         {
           headers: {
