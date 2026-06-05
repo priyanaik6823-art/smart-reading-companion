@@ -64,7 +64,7 @@ const [userResults, setUserResults] = useState([]);
     try {
 
       const res = await axios.get(
-        "http://localhost:5000/api/books"
+        "https://smart-reading-companion-1.onrender.com/api/books"
       );
 
       setBooks(res.data.books || []);
@@ -82,7 +82,7 @@ const [userResults, setUserResults] = useState([]);
     try {
 
       await axios.delete(
-        `http://localhost:5000/api/books/${bookId}`,
+        `https://smart-reading-companion-1.onrender.com/api/books/${bookId}`,
         {
           data: {
             userId: user._id,
@@ -117,7 +117,7 @@ const [userResults, setUserResults] = useState([]);
     const token = localStorage.getItem("token");
 
     const res = await axios.get(
-      `http://localhost:5000/api/user/search?query=${value}`,
+      `https://smart-reading-companion-1.onrender.com/api/user/search?query=${value}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -236,7 +236,7 @@ const [userResults, setUserResults] = useState([]);
         <img
           src={
             user.profilePic
-              ? `http://localhost:5000/${user.profilePic}`
+              ? `https://smart-reading-companion-1.onrender.com/${user.profilePic}`
               : "https://i.pravatar.cc/100"
           }
           className="w-10 h-10 rounded-full object-cover"
@@ -281,7 +281,7 @@ const [userResults, setUserResults] = useState([]);
           >
 
             <img
-              src={`http://localhost:5000${book.coverImage}`}
+              src={`https://smart-reading-companion-1.onrender.com${book.coverImage}`}
               className="h-40 w-full object-cover rounded-xl"
             />
 
