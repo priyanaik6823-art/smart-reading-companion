@@ -43,7 +43,7 @@ const Reader = () => {
     const fetchProgress = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/progress/user/${userId}/book/${bookId}`
+          `https://smart-reading-companion-1.onrender.com/api/progress/user/${userId}/book/${bookId}`
         );
 
         console.log("PROGRESS RESPONSE:", res.data);
@@ -65,7 +65,7 @@ const Reader = () => {
   // ================= SAVE PROGRESS =================
   const saveProgress = async (page) => {
     try {
-      await axios.post("http://localhost:5000/api/progress/save", {
+      await axios.post("https://smart-reading-companion-1.onrender.com/api/progress/save", {
         userId,
         bookId,
         currentPage: page,
