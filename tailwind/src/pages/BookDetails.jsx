@@ -159,7 +159,7 @@ const BookDetails = () => {
           {/* COVER */}
           <div>
             <img
-              src={`https://smart-reading-companion-1.onrender.com${book.coverImage}`}
+              src={book.coverImage}
               className="w-full max-h-[700px] object-contain rounded-2xl bg-white"
             />
           </div>
@@ -253,7 +253,7 @@ const BookDetails = () => {
                 onClick={() =>
                   navigate("/read", {
                     state: {
-                      pdfUrl: `https://smart-reading-companion-1.onrender.com${book.pdfFile}`,
+                      pdfUrl: {book.pdfFile},
                       bookId: book._id,
                       totalPages: book.totalPages,
                     },
