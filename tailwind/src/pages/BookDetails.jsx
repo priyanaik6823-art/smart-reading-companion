@@ -253,7 +253,7 @@ const BookDetails = () => {
                 onClick={() =>
                   navigate("/read", {
                     state: {
-                      pdfUrl: {book.pdfFile},
+                      pdfUrl: book.pdfFile,
                       bookId: book._id,
                       totalPages: book.totalPages,
                     },
