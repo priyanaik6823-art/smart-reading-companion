@@ -247,7 +247,7 @@ const Progress = () => {
                         onClick={() =>
                           navigate("/read", {
                             state: {
-                              pdfUrl: `{book.pdfFile}`,
+                              pdfUrl: book.pdfFile,
                               bookId: book._id,
                               totalPages: item.totalPages,
                             },
