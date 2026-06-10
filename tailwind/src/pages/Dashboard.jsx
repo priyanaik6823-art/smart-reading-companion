@@ -281,7 +281,7 @@ const [userResults, setUserResults] = useState([]);
           >
 
             <img
-              src={`https://smart-reading-companion-1.onrender.com${book.coverImage}`}
+              src={book.coverImage}
               className="h-40 w-full object-cover rounded-xl"
             />
 
