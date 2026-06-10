@@ -159,7 +159,7 @@ const Progress = () => {
                     {book?.coverImage && (
 
                       <img
-                        src={`https://smart-reading-companion-1.onrender.com${book.coverImage}`}
+                        src={book.coverImage}
                         alt={book?.title}
                         className="w-28 h-40 object-cover rounded-2xl shadow-lg"
                       />
@@ -247,7 +247,7 @@ const Progress = () => {
                         onClick={() =>
                           navigate("/read", {
                             state: {
-                              pdfUrl: `https://smart-reading-companion-1.onrender.com${book.pdfFile}`,
+                              pdfUrl: `{book.pdfFile}`,
                               bookId: book._id,
                               totalPages: item.totalPages,
                             },
